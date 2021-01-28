@@ -1,6 +1,6 @@
 // We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
 
-let arrayOfTodos = [
+/*let arrayOfTodos = [
   {
   "userId": 14,
   "id": 1,
@@ -13,6 +13,8 @@ let arrayOfTodos = [
   "title": "delectus aut autem",
   "completed": false
 }]
+*/
+
 
 const fetchTodos = () => {
   fetch('https://jsonplaceholder.typicode.com/todos')
@@ -25,12 +27,8 @@ const fetchTodos = () => {
   const logTodos = () =>{
     console.log(arrayOfTodos)
   }
- 
 
-
-const logTodos = () => {
-  console.log(arrayOfTodos)
-}
+//Making buttons work with JSON auto-populating
 
 const populateTodos = () => {
   const firstObj = arrayOfTodos [0]
@@ -47,24 +45,13 @@ const populateTodos = () => {
 
 const createIncompleteElement = (todo) => {
   //then capture the ol item into a variable (getElementByID)
+  let ol = document.getElementByID('todo-list')
 
-  let ol = document.querySelector('ol')
+    ol.style.height = '100px'
+    ol.style.width = '100px'
+    ol.style.backgroundColor = 'purple'
 
-  let ol2 = document.getElementByTagName('ol')
-  //console.log('ol2', ol)
-  //console.log('ol', 'ol')
-
-  ol.style.height = '100px'
-  ol.style.width = '100px'
-  ol.style.backgroundColor = 'blue'
-
-  let li = document.querySelector('li')
-
-
-
-  //createElement to make a new ListeningStateChangedEventcreate TextNode inside the li using the title property.
-  //Now append the text to the new Element.
-  //then append the element to the ol element
+  //let li = document.querySelector('li') - not sure if this is correct?
 }
 
 
