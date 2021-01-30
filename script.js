@@ -15,7 +15,6 @@
 }] */
 
 
-
 const fetchTodos = () => {
   fetch('https://jsonplaceholder.typicode.com/todos')
   .then((response) => {
@@ -61,7 +60,43 @@ var createSublist = function(container, arrayOfTodos) {
     ul.appendChild(li);
   }
   container.appendChild(ul);
+  
 };
+
+
+var container2 = document.getElementsByClassName("container")[1]
+var completed = arrayOfTodos.completed;
+
+var changeColor = function(container2, completed) {
+  var ul2 = document.createElement('ul');
+  for (var i = 0; i = completed; i++) {
+    if (completed='true')
+    return completed.style.backgroundColor = 'blue';
+    else{
+      return completed.styles.backgroundColor = 'red';
+    }
+    ul2.appendChild(li);
+  }
+  container2.appendChild(ul2);  }
+
+
+//button.addEventListener('click', onClick, false);
+/*var ol = document.getElementsByClassName('ol');
+var changeColor = document.getElementById('change-color')
+/*changeColor = function onClick(ul, arrayOfTodoscompleted) {
+  var 
+  console.log(ul[0].getAttribute('completed'));
+  for (var i = 0; i < text.length; i++) {
+   console.log(text[i].getAttribute('completed'));
+   selectedId = text[i].getAttribute('completed');
+   document.getElementById(selectedId).style.color = "red";
+  }
+}
+
+
+/*ol.style.height = '100px';
+    ol.style.width = '100px';
+    ol.style.backgroundColor = 'purple';*/
 
 
 /*var data =[  
@@ -110,14 +145,6 @@ else
 
 
 
-
-
-
-
-
-
-
-
 //const createIncompleteElement = (todo) => {
   //then capture the ol item into a variable (getElementByID)
   //let ol = document.querySelector('ol')
@@ -126,17 +153,10 @@ else
   //let li = document.createElement.inner-HTML('li')
   
 
-
-
-
   /*console.log('ol:', ol)
     ol.style.height = '100px';
     ol.style.width = '100px';
     ol.style.backgroundColor = 'purple';*/
-
-
-
-
 
 
 
