@@ -38,15 +38,6 @@ const populateTodos = () => {
   const firstObj = arrayOfTodos[0]
   const userId = firstObj.userId
   createSublist(container, arrayOfTodos)
-  
-  //createSublist(   , s)
- /* arrayOfTodos.forEach(todo => {
-    if (!todo.completed){
-      createIncompleteElement(todo)
-    } else {
-      createIncompleteElement(todo)
-    }
-  })*/
 }
 
 var container = document.getElementsByClassName("container")[0]
@@ -60,24 +51,30 @@ var createSublist = function(container, arrayOfTodos) {
     ul.appendChild(li);
   }
   container.appendChild(ul);
-  
-};
 
 
-var container2 = document.getElementsByClassName("container")[1]
-var completed = arrayOfTodos.completed;
-
-var changeColor = function(container2, completed) {
+changeColor = function(container2, completed) {
+  var container2 = document.getElementById("container2")
+  var completed = arrayOfTodos.completed;
   var ul2 = document.createElement('ul');
+
   for (var i = 0; i = completed; i++) {
-    if (completed='true')
-    return completed.style.backgroundColor = 'blue';
-    else{
-      return completed.styles.backgroundColor = 'red';
-    }
+    var row = arrayOfTodos[i];
+    var li = document.createElement('li');
+    li.innerText = row.completed;
     ul2.appendChild(li);
+  
+  container2.appendChild(ul2);  
+  
+  if (completed='true')
+    return completed.style.color = 'blue';
+  else{
+    return completed.style.color = 'red';
   }
-  container2.appendChild(ul2);  }
+}
+};
+}
+
 
 
 //button.addEventListener('click', onClick, false);
