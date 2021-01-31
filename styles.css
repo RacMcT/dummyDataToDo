@@ -1,0 +1,12 @@
+body{
+  padding-left: 35%;
+}
+
+button{
+  background-color: rgb(223, 164, 164);
+}
+
+button:hover{
+  background-color: rgb(171, 221, 238);
+}
+
