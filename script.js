@@ -79,6 +79,34 @@ var changeColor = function (container2, todos) {
 }
 
 
+// var myObj, x;
+// myObj = (arrayOfTodos);
+// for (x in myObj){
+//   document.getElementById("demo"),innerHTML +=x;
+// }
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("demo");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Title: ' + data[i].title + '<br> Completion:' + data[i].completed;
+                //if(data[i].completed ='true'){
+                //  div.style.color ='blue'
+                //}else {
+                //  div.style.color ='red'
+                //}
+                mainContainer.appendChild(div);
+            }
+        }
+
+
 // colorCode (arrayOfTodos) {
 //   if (todo.completed =='true') {
 //     li.style.color = 'blue';}
