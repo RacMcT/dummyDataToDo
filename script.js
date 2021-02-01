@@ -107,12 +107,23 @@ fetch('https://jsonplaceholder.typicode.com/todos')
         }
 
 
-function filterUsername(arrayOfTodos) {
-  return arrayOfTodos.username > 4;
+// function filterUsername(arrayOfTodos) {
+//   return arrayOfTodos.username > 4;
+// }
+
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = username.filter(filterUsername);
+// }
+
+
+var username=(arrayOfTodos.username)
+
+function filterName(arrayOfTodos){
+  return arrayOfTodos.username >=2;
 }
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = username.filter(filterUsername);
+function myFunction2(){
+  document.createElement('p').innerHTML = username.filter(filterName);
 }
 
 
@@ -123,13 +134,6 @@ function myFunction() {
 // }
 
 
-
-
-
-
-
-
-
   // if (todo.completed='true')
   //   return li.style.color = 'blue';
   // else{
@@ -137,7 +141,7 @@ function myFunction() {
   // }
 
 
-
+  
 
 //button.addEventListener('click', onClick, false);
 /*var ol = document.getElementsByClassName('ol');
@@ -202,8 +206,6 @@ else
   console.log('Container has not been found');
 }
 
-
-
 //const createIncompleteElement = (todo) => {
   //then capture the ol item into a variable (getElementByID)
   //let ol = document.querySelector('ol')
@@ -216,7 +218,6 @@ else
     ol.style.height = '100px';
     ol.style.width = '100px';
     ol.style.backgroundColor = 'purple';*/
-
 
 
 /*const arrayOfTodos1 = [
