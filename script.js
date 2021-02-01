@@ -107,6 +107,15 @@ fetch('https://jsonplaceholder.typicode.com/todos')
         }
 
 
+function filterUsername(arrayOfTodos) {
+  return arrayOfTodos.username > 4;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = username.filter(filterUsername);
+}
+
+
 // colorCode (arrayOfTodos) {
 //   if (todo.completed =='true') {
 //     li.style.color = 'blue';}
