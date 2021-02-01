@@ -31,3 +31,54 @@ for (x in myObj){
 
 
 // x=myObj.completed[0]
+
+
+//Attempt Again- back to Juan's class Recording://
+
+Let arrayOfTodos = [
+  {
+  "userId": 14,
+  "id":1,
+  "title": "delectus aut autem"
+  "completed": false
+},
+
+{
+  "userId": 20,
+  "id":2,
+  "title": "delectus aut autem"
+  "completed": false
+}]
+
+const fetchTodos =()=>{
+  fetch('https://jsonplaceholder.typicode.com/todos')
+  .then((response)=> {
+    console.log('OG response', x)
+    return response.json()
+  })
+  .then{(json) => {
+    console.log('OG json', json)
+    arrayOfTodos = json
+  }
+  }
+}
+
+const logTodos =() => {
+  console.log(arrayOfTodos)
+}
+
+const populateTodos() =>{
+  const firstObj = arrayOfTodos[0]
+  const userId=firstObj.userId
+  arrayOfTodos.userId
+  arrayOfTodos.forEach(todo =>{
+    if (!todo.completed){
+      createIncompletedElement(todo)
+    }else{
+      createElement(todo)
+    }
+  })
+}
+
+filterName
+

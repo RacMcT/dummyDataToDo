@@ -85,26 +85,26 @@ var changeColor = function (container2, todos) {
 //   document.getElementById("demo"),innerHTML +=x;
 // }
 
-fetch('https://jsonplaceholder.typicode.com/todos')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            });
-        function appendData(data) {
-            var mainContainer = document.getElementById("demo");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = 'Title: ' + data[i].title + '<br> Completion:' + data[i].completed;
-                //if(data[i].completed ='true'){
-                //  div.style.color ='blue'
-                //}else {
-                //  div.style.color ='red'
-                //}
-                mainContainer.appendChild(div);
-            }
-        }
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//             .then(function (response) {
+//                 return response.json();
+//             })
+//             .then(function (data) {
+//                 appendData(data);
+//             });
+//         function appendData(data) {
+//             var mainContainer = document.getElementById("demo");
+//             for (var i = 0; i < data.length; i++) {
+//                 var div = document.createElement("div");
+//                 div.innerHTML = 'Title: ' + data[i].title + '<br> Completion:' + data[i].completed;
+//                 //if(data[i].completed ='true'){
+//                 //  div.style.color ='blue'
+//                 //}else {
+//                 //  div.style.color ='red'
+//                 //}
+//                 mainContainer.appendChild(div);
+//             }
+//         }
 
 
 // function filterUsername(arrayOfTodos) {
@@ -119,7 +119,7 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 var username=(arrayOfTodos.username)
 
 function filterName(arrayOfTodos){
-  return arrayOfTodos.username >=2;
+  return arrayOfTodos.userId >3;
 }
 
 function myFunction2(){
@@ -238,3 +238,4 @@ else
 console.log(arrayOfTodos1[0].userId) // => 14
 console.log(arrayOfTodos1[1].userId) // => 20
 */
+
