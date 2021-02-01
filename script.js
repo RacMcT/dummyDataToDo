@@ -1,6 +1,6 @@
 // We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
 
-/*let arrayOfTodos = [
+let arrayOfTodos = [
   {
   "userId": 14,
   "id": 1,
@@ -12,7 +12,7 @@
   "id": 2,
   "title": "delectus aut autem",
   "completed": false
-}] */
+}] 
 
 
 const fetchTodos = () => {
@@ -56,8 +56,6 @@ var createSublist = function (container, todos) {
   container.appendChild(ul);
 }
 
-
-
 const changeColors = () => {
   //const color = arrayOftodos[0]
   changeColor(container2, arrayOfTodos)
@@ -77,6 +75,25 @@ var changeColor = function (container2, todos) {
   container2.appendChild(ul2);
 
 }
+
+
+
+function filterName(arrayOfTodos){
+  return arrayOfTodos.userId >3;
+}
+
+function userNameFilter(){
+  var filteredArr = arrayOfTodos.filter(filterName);
+  console.log(filteredArr)
+  //start here!!//
+}
+
+
+
+//filteredArr is the filtered array returning userId's >3-- only available within that scope username filter function block of code//
+
+
+
 
 
 // var myObj, x;
@@ -116,15 +133,7 @@ var changeColor = function (container2, todos) {
 // }
 
 
-var username=(arrayOfTodos.username)
 
-function filterName(arrayOfTodos){
-  return arrayOfTodos.userId >3;
-}
-
-function myFunction2(){
-  document.createElement('p').innerHTML = username.filter(filterName);
-}
 
 
 // colorCode (arrayOfTodos) {
