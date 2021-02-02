@@ -83,23 +83,35 @@ function idFilter(){
   var filteredArr = arrayOfTodos.filter((arg)=> {
     return arg.userId==inputValue
   });
-  var container3 = document.getElementById("container3")
-  var p = document.createElement('p');
-  p.innerText = filteredArr; 
-  container3.appendChild(p);
 
+  //console.log to make sure filtered array works
   console.log(filteredArr)
 
-  //start here for pushing value into html
- 
-
+  //populates in browser view
+  let filterOutput = document.createElement('p');
+filterOutput.innerHTML = filteredArr[0].title;
+document.querySelector('#container3').appendChild(filterOutput);
 }
 
+//reset button to clear userid input field
 
 function reset()
 {
     document.getElementById("id-num").value = "";
 }
+
+
+
+
+
+
+
+
+//JAVASCRIPT CODE ATTEMPTS TO LEARN FROM:
+
+
+//let filterOutput = document.createElement('p'); **these 2 lines of code will make it appear in seperate window but does not convert array object into something readable
+//document.write(filteredArr)
 
 // function reset(){
 //   let inputValue = document.getElementById('clear-btn').value;
@@ -113,18 +125,6 @@ function reset()
 //let reset
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // let inputValue = document.getElementById('id-num').value;
 
 // function filterId(arrayOfTodos){
@@ -136,8 +136,6 @@ function reset()
 // }
 
 //filteredArr is the filtered array returning userId's >3-- only available within that scope username filter function block of code//
-
-
 
 
 // var myObj, x;
@@ -175,9 +173,6 @@ function reset()
 // function myFunction() {
 //   document.getElementById("demo").innerHTML = username.filter(filterUsername);
 // }
-
-
-
 
 
 // colorCode (arrayOfTodos) {
@@ -291,4 +286,3 @@ else
 console.log(arrayOfTodos1[0].userId) // => 14
 console.log(arrayOfTodos1[1].userId) // => 20
 */
-
