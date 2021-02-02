@@ -83,14 +83,18 @@ function idFilter(){
   var filteredArr = arrayOfTodos.filter((arg)=> {
     return arg.userId==inputValue
   });
+  var container3 = document.getElementById("container3")
+  var p = document.createElement('p');
+  p.innerText = filteredArr; 
+  container3.appendChild(p);
+
   console.log(filteredArr)
 
-
   //start here for pushing value into html
-  var p = document.createElement('p');
-  p.innerText = filteredArr.id; 
+ 
 
 }
+
 
 function reset()
 {
