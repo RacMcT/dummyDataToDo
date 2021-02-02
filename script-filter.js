@@ -1,3 +1,5 @@
+// Nope! forget this script page exists :/ //
+
 const fetchTodos = () => {
   fetch('https://jsonplaceholder.typicode.com/todos')
     .then((response) => {
