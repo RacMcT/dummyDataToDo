@@ -76,22 +76,38 @@ var changeColor = function (container2, todos) {
 
 }
 
+//FILTERING USING INPUT DATA //
 
+//let inputValue = document.getElementById('id-num').value;
 
-function filterName(arrayOfTodos){
-  return arrayOfTodos.userId >3;
-}
-
-function userNameFilter(){
-  var filteredArr = arrayOfTodos.filter(filterName);
-  console.log(filteredArr)
-  //start here!!//
+function filterIds(){
+  let inputValue = document.getElementById('id-num').value;
+  return arrayOfTodos.userId == inputValue;
 }
 
 
+function idFilter(){
+  let inputValue = document.getElementById('id-num').value;
+  var filteredArr = arrayOfTodos.filter(filterIds);
+  console.log(inputValue);
+  console.log(filteredArr) //showing up in console, but values are not visible
+  //start here for pushing value into html
+  var p = document.createElement('p');
+  p.innerText = filteredArr.id; 
+
+}
+
+// let inputValue = document.getElementById('id-num').value;
+
+// function filterId(arrayOfTodos){
+//   return arrayOfTodos.userId
+// }
+
+// let inputValue = arrayOfTodos.filter(filterId) => {
+//   return 
+// }
 
 //filteredArr is the filtered array returning userId's >3-- only available within that scope username filter function block of code//
-
 
 
 
