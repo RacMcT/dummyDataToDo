@@ -78,24 +78,32 @@ var changeColor = function (container2, todos) {
 
 //FILTERING USING INPUT DATA //
 
-//let inputValue = document.getElementById('id-num').value;
-
-function filterIds(){
-  let inputValue = document.getElementById('id-num').value;
-  return arrayOfTodos.userId == inputValue;
-}
-
-
 function idFilter(){
   let inputValue = document.getElementById('id-num').value;
-  var filteredArr = arrayOfTodos.filter(filterIds);
-  console.log(inputValue);
-  console.log(filteredArr) //showing up in console, but values are not visible
+  var filteredArr = arrayOfTodos.filter((arg)=> {
+    return arg.userId==inputValue
+  });
+  console.log(filteredArr)
+
+
   //start here for pushing value into html
   var p = document.createElement('p');
   p.innerText = filteredArr.id; 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let inputValue = document.getElementById('id-num').value;
 
