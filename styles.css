@@ -2,6 +2,10 @@ body {
   padding-left: 35%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .part1 button {
   background-color: rgb(241, 146, 146);
   padding: 2px;
@@ -18,7 +22,6 @@ body {
 .submit-id-num {
   color: white;
   background: #111;
-  cursor: pointer;
   position: relative;
   z-index: 0;
   padding: 3px;

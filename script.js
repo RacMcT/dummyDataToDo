@@ -100,6 +100,11 @@ function reset()
     document.getElementById("id-num").value = "";
 }
 
+function clearToDos(){
+  document.getElementById("container3").innerHTML = "";
+}
+
+
 
 
 
