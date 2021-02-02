@@ -92,6 +92,22 @@ function idFilter(){
 
 }
 
+function reset()
+{
+    document.getElementById("id-num").value = "";
+}
+
+// function reset(){
+//   let inputValue = document.getElementById('clear-btn').value;
+//   return inputValue.value('')
+// }
+
+
+//var input = document.getElementById("id-num");
+//input.reset();
+
+//let reset
+
 
 
 
