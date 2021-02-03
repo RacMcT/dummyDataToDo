@@ -40,7 +40,7 @@ const logTodos = () => {
 const populateTodos = () => {
   // var thirdObj = todos[3]
   // var status = thirdObj.completed
-  console.log(status)
+  //console.log(status)
   createSublist(container, arrayOfTodos);
   // if (status="true"){li.style.color = 'blue'}
   // else{li.style.color='red'}
@@ -54,6 +54,14 @@ var createSublist = function (container, todos) {
     var row = todos[j];
     var li = document.createElement('li');  
     li.innerText = row.title;
+    console.log(li)
+    if (row.completed === true){
+      li.style.color='blue'
+    }
+    else{
+      li.style.color='red'
+    }
+    
     ul.appendChild(li);
   }
   container.appendChild(ul);
@@ -63,31 +71,30 @@ var createSublist = function (container, todos) {
 //The for loop does work and populates container 2 div properly
 //Still cannot get the color change to work- is this because "completed" is used for for loop AND the name of a property?
 
-const changeColors = () => {
-  //const color = arrayOftodos[0]
-  changeColor(container2, arrayOfTodos)
-}
+//const changeColors = (arrayOfTodos) => {
+  //console.log(arrayOfTodos);
+//}
 
-var container2 = document.getElementById("container2")
+//var container2 = document.getElementById("container2")
 
-var changeColor = function (container2, todos) {
-  var ul2 = document.createElement('ul');
-  for (var i = 0; i < todos.length; i++) {
-    var row = todos[i];
-    var li = document.createElement('li');
-    li.innerText = row.completed;
+// var changeColor = function (container2, todos) {
+//   var ul2 = document.createElement('ul');
+//   for (var i = 0; i < todos.length; i++) {
+//     var row = todos[i];
+//     var li = document.createElement('li');
+//     li.innerText = row.completed;
 
-    ul2.appendChild(li);
-  }
-  container2.appendChild(ul2);
+//     ul2.appendChild(li);
+//   }
+//   container2.appendChild(ul2);
 
-  if (li.completed == true){
-    return li.style.color='blue'
-  }
-  else{
-    return li.style.color='red'
-  }
-}
+//   if (li.completed == true){
+//     return li.style.color='blue'
+//   }
+//   else{
+//     return li.style.color='red'
+//   }
+// }
 //issue with color is that it only goes to the last one... need to get it to do it for entire loop
 
 
