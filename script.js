@@ -14,7 +14,6 @@ let arrayOfTodos = [
   "completed": false
 }] 
 
-
 //Grabs json data and puts into arary named arrayOfTodos- button click
 
 const fetchTodos = () => {
@@ -38,12 +37,7 @@ const logTodos = () => {
 //Creates sublist of arrayofTodos and then populates in HTML as list items in container div- button click
 
 const populateTodos = () => {
-  // var thirdObj = todos[3]
-  // var status = thirdObj.completed
-  //console.log(status)
   createSublist(container, arrayOfTodos);
-  // if (status="true"){li.style.color = 'blue'}
-  // else{li.style.color='red'}
   }
 
 var container = document.getElementsByClassName("container")[0]
@@ -61,44 +55,10 @@ var createSublist = function (container, todos) {
     else{
       li.style.color='red'
     }
-    
     ul.appendChild(li);
   }
   container.appendChild(ul);
 }
-
-//This was the for loop I though we had to make for the completed true/false list and then change thier colors.
-//The for loop does work and populates container 2 div properly
-//Still cannot get the color change to work- is this because "completed" is used for for loop AND the name of a property?
-
-//const changeColors = (arrayOfTodos) => {
-  //console.log(arrayOfTodos);
-//}
-
-//var container2 = document.getElementById("container2")
-
-// var changeColor = function (container2, todos) {
-//   var ul2 = document.createElement('ul');
-//   for (var i = 0; i < todos.length; i++) {
-//     var row = todos[i];
-//     var li = document.createElement('li');
-//     li.innerText = row.completed;
-
-//     ul2.appendChild(li);
-//   }
-//   container2.appendChild(ul2);
-
-//   if (li.completed == true){
-//     return li.style.color='blue'
-//   }
-//   else{
-//     return li.style.color='red'
-//   }
-// }
-//issue with color is that it only goes to the last one... need to get it to do it for entire loop
-
-
-
 
 //FILTERING USING INPUT DATA //
 
@@ -140,7 +100,8 @@ function filterCompleteToDos(){
 
   //console.log to make sure filtered array works
   console.log(filteredArrComplete)
-//populates in browser view
+
+//populates in browser view- still not totally correct- probably in argument above and/or below
 let filterOutput2 = document.createElement('p');
 filterOutput2.innerHTML = filteredArrComplete[0].completed;
 document.querySelector('#container-complete').appendChild(filterOutput2);
@@ -160,6 +121,37 @@ function filterInCompleteToDos(){
 
 
 //JAVASCRIPT CODE ATTEMPTS TO LEARN FROM:
+
+//This was the for loop I though we had to make for the completed true/false list and then change thier colors.
+//The for loop does work and populates container 2 div properly
+//Still cannot get the color change to work- is this because "completed" is used for for loop AND the name of a property?
+
+//const changeColors = (arrayOfTodos) => {
+  //console.log(arrayOfTodos);
+//}
+
+//var container2 = document.getElementById("container2")
+
+// var changeColor = function (container2, todos) {
+//   var ul2 = document.createElement('ul');
+//   for (var i = 0; i < todos.length; i++) {
+//     var row = todos[i];
+//     var li = document.createElement('li');
+//     li.innerText = row.completed;
+
+//     ul2.appendChild(li);
+//   }
+//   container2.appendChild(ul2);
+
+//   if (li.completed == true){
+//     return li.style.color='blue'
+//   }
+//   else{
+//     return li.style.color='red'
+//   }
+// }
+//issue with color is that it only goes to the last one... need to get it to do it for entire loop
+
 
   //console.log to make sure filtered array works
   //console.log(filteredArrInComplete)

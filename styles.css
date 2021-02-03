@@ -1,9 +1,19 @@
-body {
+button {
+  cursor: pointer;
+}
+
+.part1 {
   padding-left: 35%;
 }
 
-button {
-  cursor: pointer;
+.user-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.user-filter button {
+  margin: 2px;
 }
 
 .part1 button {
@@ -13,10 +23,6 @@ button {
 
 .part1 button:hover {
   background-color: lightblue;
-}
-
-.user-filter {
-  padding-top: 2%;
 }
 
 .submit-id-num {
