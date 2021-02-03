@@ -1,4 +1,4 @@
-// We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
+// Pre-populate this array with a couple objects just so it's not undefined if internet connection isn't working properly.
 
 let arrayOfTodos = [
   {
@@ -15,6 +15,8 @@ let arrayOfTodos = [
 }] 
 
 
+//Grabs json data and puts into arary named arrayOfTodos- button click
+
 const fetchTodos = () => {
   fetch('https://jsonplaceholder.typicode.com/todos')
     .then((response) => {
@@ -28,11 +30,12 @@ const fetchTodos = () => {
     })
 }
 
+//Logs arrayOfTodos in console log- button click
 const logTodos = () => {
   console.log(arrayOfTodos)
 }
 
-//Make button work with JSON auto-populating list
+//Creates sublist of arrayofTodos and then populates in HTML as list items in container div- button click
 
 const populateTodos = () => {
   // var thirdObj = todos[3]
@@ -55,6 +58,10 @@ var createSublist = function (container, todos) {
   }
   container.appendChild(ul);
 }
+
+//This was the for loop I though we had to make for the completed true/false list and then change thier colors.
+//The for loop does work and populates container 2 div properly
+//Still cannot get the color change to work- is this because "completed" is used for for loop AND the name of a property?
 
 const changeColors = () => {
   //const color = arrayOftodos[0]
@@ -88,6 +95,8 @@ var changeColor = function (container2, todos) {
 
 //FILTERING USING INPUT DATA //
 
+//filters json array by id number based on the input value
+
 function idFilter(){
   let inputValue = document.getElementById('id-num').value;
   var filteredArr = arrayOfTodos.filter((arg)=> {
@@ -97,13 +106,13 @@ function idFilter(){
   //console.log to make sure filtered array works
   console.log(filteredArr)
 
-  //populates in browser view
+  //populates in browser view with the title in the arary filtered by username and id number
   let filterOutput = document.createElement('p');
 filterOutput.innerHTML = filteredArr[0].title;
 document.querySelector('#container3').appendChild(filterOutput);
 }
 
-//reset button to clear userid input field
+//reset button to clear userid input field :(
 
 function reset()
 {
@@ -115,6 +124,7 @@ function clearToDos(){
   document.getElementById("container3").innerHTML = "";
 }
 
+//for the filtered array based on the input value, this returns "completed" title- button click
 
 function filterCompleteToDos(){
   var filteredArrComplete = arrayOfTodos.filter((argComplete)=> {
@@ -129,6 +139,8 @@ filterOutput2.innerHTML = filteredArrComplete[0].completed;
 document.querySelector('#container-complete').appendChild(filterOutput2);
 }
 
+//for the filtered array based on the input value, this returns "not completed" title- button click
+//still trying to make it work how it is supposed to -- I think error is on line 147?
 
 function filterInCompleteToDos(){
   var filteredArrInComplete = arrayOfTodos.filter((argInComplete)=> {
@@ -136,6 +148,11 @@ function filterInCompleteToDos(){
   });
   console.log(filteredArrInComplete)
 }
+
+
+
+
+//JAVASCRIPT CODE ATTEMPTS TO LEARN FROM:
 
   //console.log to make sure filtered array works
   //console.log(filteredArrInComplete)
@@ -145,13 +162,6 @@ function filterInCompleteToDos(){
 //document.querySelector('#container-incomplete').appendChild(filterOutput3);
 //}
 
-
-
-
-
-
-
-//JAVASCRIPT CODE ATTEMPTS TO LEARN FROM:
 
 
 //let filterOutput = document.createElement('p'); **these 2 lines of code will make it appear in seperate window but does not convert array object into something readable
