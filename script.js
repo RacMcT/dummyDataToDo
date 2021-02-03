@@ -116,7 +116,34 @@ function clearToDos(){
 }
 
 
+function filterCompleteToDos(){
+  var filteredArrComplete = arrayOfTodos.filter((argComplete)=> {
+    return argComplete.completed
+  });
 
+  //console.log to make sure filtered array works
+  console.log(filteredArrComplete)
+//populates in browser view
+let filterOutput2 = document.createElement('p');
+filterOutput2.innerHTML = filteredArrComplete[0].completed;
+document.querySelector('#container-complete').appendChild(filterOutput2);
+}
+
+
+function filterInCompleteToDos(){
+  var filteredArrInComplete = arrayOfTodos.filter((argInComplete)=> {
+    return argInComplete.completed==false 
+  });
+  console.log(filteredArrInComplete)
+}
+
+  //console.log to make sure filtered array works
+  //console.log(filteredArrInComplete)
+//populates in browser view
+//let filterOutput3 = document.createElement('p');
+//filterOutput3.innerHTML = filteredArrInComplete[0].completed=false
+//document.querySelector('#container-incomplete').appendChild(filterOutput3);
+//}
 
 
 
@@ -279,7 +306,7 @@ else
   //let li = document.createElement.inner-HTML('li')
 
 
-  /*console.log('ol:', ol)
+  //console.log('ol:', ol)
     ol.style.height = '100px';
     ol.style.width = '100px';
     ol.style.backgroundColor = 'purple';*/
