@@ -74,7 +74,17 @@ var changeColor = function (container2, todos) {
   }
   container2.appendChild(ul2);
 
+  if (li.completed == true){
+    return li.style.color='blue'
+  }
+  else{
+    return li.style.color='red'
+  }
 }
+//issue with color is that it only goes to the last one... need to get it to do it for entire loop
+
+
+
 
 //FILTERING USING INPUT DATA //
 
@@ -99,10 +109,12 @@ function reset()
 {
     document.getElementById("id-num").value = "";
 }
+//button clears container3 div in HTML
 
 function clearToDos(){
   document.getElementById("container3").innerHTML = "";
 }
+
 
 
 
