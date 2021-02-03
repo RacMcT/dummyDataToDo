@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>To Do List</title>
+</head>
+
+<body>
+
+  <p id="demo"></p>
+
+<section class="part1">
+  <button onclick="fetchTodos()">Fetch Todos</button>
+  <button onclick="logTodos()">Log Todos</button>
+  <button onclick="populateTodos()">Populate Todos</button>
+  <button onclick="changeColors()">Change Colors</button>
+  <div class="container"></div>
+  <div class="container2" id="container2"></div>
+  <div class="userName"></div>
+</section>
+
+
+  <section class="user-filter">
+    <label for="id-num">Select ID numbers between 1-10</label>
+    <input type="number" min="1" max="10" id="id-num"></input>
+    <button class= "submit-id-num" id="submit-id-num" onclick="idFilter()">Filter Title by ID</button>
+    <button id="reset" onclick="reset()">Reset ID Search</button>
+    <button id="clear-todos" onclick="clearToDos()">Clear Titles List</button>
+    <button id="only-completed"onclick="filterCompleteToDos()">Complete Titles</button>
+    <button id="only-incomplete"onclick="filterInCompleteToDos()">Incomplete Titles</button>
+  </section>
+
+  <div id="container3"></div>
+
+  <div id="container-complete"></div>
+
+  <div id="container-incomplete"></div>
+
+  
+
+
+
+
+  
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
